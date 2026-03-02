@@ -5,5 +5,9 @@
 int main(void)
 {
   char* s = "je fais un test";
-  printf("strlen = %d\nft_strlen = %d\n", strlen(s), ft_strlen(s));
+  size_t l1 = strlen(s);
+  size_t l2 = ft_strlen(s);
+
+  printf("strlen = %ld\nft_strlen = %ld\n", l1, l2);
+  return 0;
 }
