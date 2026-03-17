@@ -3,7 +3,9 @@
 
 # include <stddef.h>
 # include <unistd.h>
+# include <string.h>
 
 size_t  ft_strlen(const char *s);
+char*   ft_strcpy(char* restrict dst, char* restrict const src)
 
 #endif
