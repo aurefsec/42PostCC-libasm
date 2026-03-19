@@ -10,10 +10,13 @@ int main(void)
 
   printf("\nft_strcpy : \n");
   char* src = "je fais un test";
-  char* dst = "ej siaf nu tset";
+  char* dst = malloc(sizeof(char) * strlen(src) + 1);
+  if (!dst)
+    return 1;
   char* ret1 = strcpy(dst, src);
   char* ret2 = ft_strcpy(dst, src);
   printf("strcpy = %s\nft_strcpy = %s\n", ret1, ret2);
+  free(dst);
 
   return 0;
 
