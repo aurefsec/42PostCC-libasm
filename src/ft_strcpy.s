@@ -5,13 +5,14 @@ ft_strcpy:
   xor rdx, rdx
 
 .loop:
-  mov al, BYTE [rsi + rdx]
-  test al, al
+  mov cl, BYTE [rsi + rdx]
+  mov BYTE [rdi + rdx], cl
+  test cl, cl
   je .done
 
   inc rdx
   jmp .loop
 
 .done:
-  mov al, '\0'
+  mov rax, rdi
   ret
