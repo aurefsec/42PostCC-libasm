@@ -2,15 +2,15 @@ section .text
 global ft_strlen
 
 ft_strlen:
-  xor rax, rax ; Init rax to 0, rax = index and return value
+  xor rax, rax
 
 .loop:
-  mov dl, BYTE [rdi + rax] ; dl = 8 bits registrer of rdx, rdi = first char param of strlen
-  test dl, dl ; test = if dl == 0
-  je .done ; if dl == 0 jump to loop_end
+  mov dl, BYTE [rdi + rax]
+  test dl, dl
+  je .done
 
-  inc rax ; increment rax (i++)
-  jmp .loop ; jump to loop
+  inc rax
+  jmp .loop
 
 .done:
-  ret ; retun rax
+  ret
