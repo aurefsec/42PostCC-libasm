@@ -19,8 +19,8 @@ int main(void)
   free(dst);
 
   printf("\nft_strcmp :\n");
-  int nb1 = strcmp("je fais un test", "je fais un toast");
-  int nb2 = ft_strcmp("je fais un test", "je fais un toast");
+  int nb1 = strcmp("je fais un test", "je fais un test");
+  int nb2 = ft_strcmp("je fais un test", "je fais un test");
   printf("strcmp = %d\nft_strcmp = %d\n", nb1, nb2);
 
   return 0;
