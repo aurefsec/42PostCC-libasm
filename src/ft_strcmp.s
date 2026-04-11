@@ -7,12 +7,10 @@ ft_strcmp:
 .loop:
   mov cl, BYTE [rdi + rdx]
   mov bl, BYTE [rsi + rdx]
-  test cl, cl
-  je .done
-  test bl, bl
-  je .done
   cmp cl, bl
   jne .done
+  test cl, cl
+  je .done
 
   inc rdx
   jmp .loop
