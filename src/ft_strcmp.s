@@ -6,8 +6,8 @@ ft_strcmp:
 
 .loop:
   mov cl, BYTE [rdi + rdx]
-  mov bl, BYTE [rsi + rdx]
-  cmp cl, bl
+  mov r8b, BYTE [rsi + rdx]
+  cmp cl, r8b
   jne .done
   test cl, cl
   je .done
@@ -17,6 +17,6 @@ ft_strcmp:
 
 .done:
   movzx eax, cl
-  movzx edx, bl
-  sub eax, edx
+  movzx r8d, r8b
+  sub eax, r8d
   ret
