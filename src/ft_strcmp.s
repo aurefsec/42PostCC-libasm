@@ -18,6 +18,7 @@ ft_strcmp:
   jmp .loop
 
 .done:
-  sub cl, bl
-  mov rax, cl
+  movzx eax, cl
+  movzx edx, bl
+  sub eax, edx
   ret
