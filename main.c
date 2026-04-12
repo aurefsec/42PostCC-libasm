@@ -23,7 +23,7 @@ int main(void)
   int nb2 = ft_strcmp("je fais un test", "je fais un test");
   printf("strcmp = %d\nft_strcmp = %d\n", nb1, nb2);
 
-  printf("\n TEST 4 : ft_write\n");
+  printf("\nTEST 4 : ft_write\n");
   ssize_t w1 = write(1, "je fais un test\n", 16);
   ssize_t w2 = ft_write(1, "je fais un test\n", 16);
   printf("write = %zd\nft_write = %zd\n", w1, w2);
@@ -39,7 +39,7 @@ int main(void)
   char buff2[50];
   ssize_t r1 = read(fd1[0], buff1, 16);
   ssize_t r2 = ft_read(fd2[0], buff2, 16);
-  printf("read return = %zd\nread buff = %s\n", r1, buff1);
+  printf("read return = %zd\nread buff = %s", r1, buff1);
   printf("ft_read return = %zd\nft_read buff = %s\n", r2, buff2);
   close(fd1[0]);
   close(fd1[1]);
