@@ -2,13 +2,13 @@
 
 int main(void)
 {
-  printf("ft_strlen :\n");
+  printf("TEST 1 : ft_strlen\n");
   char* s = "je fais un test";
   size_t l1 = strlen(s);
   size_t l2 = ft_strlen(s);
   printf("strlen = %ld\nft_strlen = %ld\n", l1, l2);
 
-  printf("\nft_strcpy :\n");
+  printf("\nTEST 2 : ft_strcpy\n");
   char* src = "je fais un test";
   char* dst = malloc(sizeof(char) * strlen(src) + 1);
   if (!dst)
@@ -18,17 +18,17 @@ int main(void)
   printf("strcpy = %s\nft_strcpy = %s\n", ret1, ret2);
   free(dst);
 
-  printf("\nft_strcmp :\n");
+  printf("\nTEST 3 : ft_strcmp\n");
   int nb1 = strcmp("je fais un test", "je fais un test");
   int nb2 = ft_strcmp("je fais un test", "je fais un test");
   printf("strcmp = %d\nft_strcmp = %d\n", nb1, nb2);
 
-  printf("\nft_write :\n");
+  printf("\n TEST 4 : ft_write\n");
   ssize_t w1 = write(1, "je fais un test\n", 16);
   ssize_t w2 = ft_write(1, "je fais un test\n", 16);
   printf("write = %zd\nft_write = %zd\n", w1, w2);
 
-  printf("\nft_read :\n");
+  printf("\nTEST 5 : ft_read\n");
   int fd1[2];
   int fd2[2];
   pipe(fd1);
