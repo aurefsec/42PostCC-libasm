@@ -10,7 +10,7 @@ ft_write:
 
 .error:
   push rax
-  call __errno_location
+  call __errno_location wrt ..plt
   pop rcx
   neg rcx
   mov [rax], rcx
