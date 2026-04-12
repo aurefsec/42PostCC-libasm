@@ -1,5 +1,6 @@
 section .text
 global ft_write
+extern errno_location
 
 ft_write:
   mov eax, 1
