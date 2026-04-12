@@ -23,5 +23,10 @@ int main(void)
   int nb2 = ft_strcmp("je fais un test", "je fais un test");
   printf("strcmp = %d\nft_strcmp = %d\n", nb1, nb2);
 
+  printf("\nft_write :\n");
+  ssize_t w1 = write(1, "je fais un test\n", 16);
+  ssize_t w2 = ft_write(1, "je fais un test\n", 16);
+  printf("write = %zd\nft_write = %zd\n", w1, w2);
+
   return 0;
 }
