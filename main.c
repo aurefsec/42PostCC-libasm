@@ -32,8 +32,8 @@ int main(void)
   int fd[2];
   pipe(fd);
   write(fd[1], "je fais un test\n", 16);
-  char* buff1[50];
-  char* buff2[50];
+  char buff1[50];
+  char buff2[50];
   ssize_t r1 = read(fd[0], buff1, 16);
   ssize_t r2 = ft_read(fd[0], buff2, 16);
   printf("read return = %zd\nread buff = %s\n", r1, buff1);
