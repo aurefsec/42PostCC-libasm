@@ -1,6 +1,6 @@
 section .text
 global ft_write
-extern errno_location
+extern __errno_location
 
 ft_write:
   mov eax, 1
@@ -10,7 +10,7 @@ ft_write:
 
 .error:
   push rax
-  call errno_location
+  call __errno_location
   pop rcx
   neg rcx
   mov [rax], rcx
