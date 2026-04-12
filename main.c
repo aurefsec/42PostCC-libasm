@@ -39,6 +39,8 @@ int main(void)
   char buff2[50];
   ssize_t r1 = read(fd1[0], buff1, 16);
   ssize_t r2 = ft_read(fd2[0], buff2, 16);
+  buff1[r1] = '\0';
+  buff2[r2] = '\0';
   printf("read return = %zd\nread buff = %s", r1, buff1);
   printf("ft_read return = %zd\nft_read buff = %s\n", r2, buff2);
   close(fd1[0]);
