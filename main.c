@@ -41,8 +41,10 @@ int main(void)
   ssize_t r2 = ft_read(fd2[0], buff2, 16);
   printf("read return = %zd\nread buff = %s\n", r1, buff1);
   printf("ft_read return = %zd\nft_read buff = %s\n", r2, buff2);
-  close(fd1);
-  close(fd2);
+  close(fd1[0]);
+  close(fd1[1]);
+  close(fd2[0]);
+  close(fd2[1]);
 
   return 0;
 }
