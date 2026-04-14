@@ -43,7 +43,7 @@ int main(void)
   buff1[r1] = '\0';
   buff2[r2] = '\0';
   printf("read return = %zd\nread buff = %s", r1, buff1);
-  printf("ft_read return = %zd\nft_read buff = %s\n", r2, buff2);
+  printf("ft_read return = %zd\nft_read buff = %s", r2, buff2);
   close(fd1[0]);
   close(fd1[1]);
   close(fd2[0]);
