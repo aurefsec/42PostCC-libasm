@@ -12,7 +12,7 @@ ft_strdup:
   mov rdi, rax
   add rdi, 1
 
-  call malloc
+  call malloc wrt ..plt
   test rax, rax
   je .error
 
