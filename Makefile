@@ -1,4 +1,5 @@
 NAME = libasm.a
+NAME_BONUS = libasm_bonus.a
 
 SRCS = 	ft_strlen.s	\
 				ft_strcpy.s	\
@@ -7,8 +8,13 @@ SRCS = 	ft_strlen.s	\
 				ft_read.s		\
 				ft_strdup.s
 
+SRCS_BONUS = ft_atoi_base.s
+
 OBJDIR = obj
 OBJS = $(addprefix $(OBJDIR)/,$(SRCS:.s=.o))
+
+OBJDIR_BONUS = obj_bonus
+OBJS_BONUS = $(addprefix $(OBJDIR_BONUS)/,$(SRCS_BONUS:.s=.o))
 
 NASM = nasm
 NASMFLAGS = -f elf64 -g -F dwarf
@@ -16,23 +22,32 @@ NASMFLAGS = -f elf64 -g -F dwarf
 AR = ar
 ARFLAGS = rcs
 
+all: $(NAME)
+
 $(NAME): $(OBJS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJS)
-
 $(OBJDIR)/%.o: src/%.s | $(OBJDIR)
 	$(NASM) $(NASMFLAGS) $< -o $@
-
 $(OBJDIR):
 	mkdir -p $(OBJDIR)
 
-all: $(NAME)
+bonus: ${NAME_BONUS}
+
+$(NAME_BONUS): $(OBJS_BONUS)
+	$(AR) $(ARFLAGS) $(NAME_BONUS) $(OBJS_BONUS)
+$(OBJDIR_BONUS)/%.o: src_bonus/%.s | $(OBJDIR_BONUS)
+	$(NASM) $(NASMFLAGS) $< -o $@
+$(OBJDIR_BONUS):
+	mkdir -p $(OBJDIR_BONUS)
+
 
 clean:
-	rm -rf $(OBJDIR)
+	rm -rf $(OBJDIR) $(OBJDIR_BONUS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(NAME_BONUS)
 
 re: fclean all
+
 
 .PHONY: all clean fclean re
