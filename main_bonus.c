@@ -7,5 +7,5 @@ int main(void)
   int hex = ft_atoi_base("FF", "0123456789ABCDEF");
   int decimal = ft_atoi_base("44", "0123456789");
   int error = ft_atoi_base("123", "01123456789");
-  printf("binary = %d\n, hex = %d\n, decimal = %d\n, error = %d\n", binary, hex, decimal, error);
+  printf("binary = %d\nhex = %d\ndecimal = %d\nerror = %d\n", binary, hex, decimal, error);
 }
