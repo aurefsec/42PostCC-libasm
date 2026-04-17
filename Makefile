@@ -35,7 +35,7 @@ bonus: ${NAME_BONUS}
 
 $(NAME_BONUS): $(OBJS_BONUS)
 	$(AR) $(ARFLAGS) $(NAME_BONUS) $(OBJS_BONUS)
-$(OBJDIR_BONUS)/%.o: src_bonus/%.s | $(OBJDIR_BONUS)
+$(OBJDIR_BONUS)/%.o: bonus/%.s | $(OBJDIR_BONUS)
 	$(NASM) $(NASMFLAGS) $< -o $@
 $(OBJDIR_BONUS):
 	mkdir -p $(OBJDIR_BONUS)
