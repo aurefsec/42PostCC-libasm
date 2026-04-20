@@ -17,13 +17,14 @@ int main(void)
   l->data = "je fais un test";
   char* str = "je fais un test 2";
   ft_list_push_front(&l, str);
-  for (int i = 0; l != 0; i++)
+  int i = 0;
+  while (l)
   {
     printf("i = %d | data = %s\n", i, (char *)l->data);
+    i++;
     t_list *tmp = l;
     l = l->next;
     free(tmp);
-    tmp = 0;
   }
 
   return 0;
