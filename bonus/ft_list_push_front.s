@@ -15,15 +15,7 @@ ft_list_push_front:
 
   pop rdi
   mov rdx, QWORD [rdi]
-  test rdx, rdx
-  jne .retrive_next
-  jump .end
-
-.retrive_next:
-  mov rdx, QWORD [rdx + 8]
   mov QWORD [rax + 8], rdx
-
-.end:
   mov QWORD [rdi], rax
   ret
 

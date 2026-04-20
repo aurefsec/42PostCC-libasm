@@ -8,4 +8,30 @@ int main(void)
   int decimal = ft_atoi_base("-44", "0123456789");
   int error = ft_atoi_base("123", "01123456789");
   printf("binary = %d\nhex = %d\ndecimal = %d\nerror = %d\n", binary, hex, decimal, error);
+
+  printf("\nTEST 2 : ft_list_push_front\n");
+  t_list* l = malloc(sizeof(t_list));
+  if (!l)
+    return 1;
+  memset(l, 0, sizeof(t_list));
+  l->data = "je fais un test";
+  char* str "je fais un test 2";
+  int bool = ft_list_push_front(&l, str);
+  if (bool == 0)
+  {
+    free(l);
+    memset(l, 0, sizeof(t_list));
+    return 1;
+  }
+  for (int i = 0; l != 0, i++)
+  {
+    printf("i = %d | data = %s\n", i, (char *)l->data);
+    i++;
+    t_list *tmp = l;
+    l = l->next;
+    free(tmp);
+    tmp = 0;
+  }
+
+  return 0;
 }
