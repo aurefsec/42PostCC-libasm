@@ -23,10 +23,9 @@ int main(void)
     memset(l, 0, sizeof(t_list));
     return 1;
   }
-  for (int i = 0; l != 0, i++)
+  for (int i = 0; l != 0, i++);
   {
     printf("i = %d | data = %s\n", i, (char *)l->data);
-    i++;
     t_list *tmp = l;
     l = l->next;
     free(tmp);
