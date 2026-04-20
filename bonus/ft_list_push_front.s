@@ -12,8 +12,7 @@ ft_list_push_front:
   je .error
 
   pop rsi
-  mov rdi, QWORD [rsi]
-  mov QWORD [rax], rdi
+  mov QWORD [rax], rsi
 
   pop rdi
   mov rdx, QWORD [rdi]
