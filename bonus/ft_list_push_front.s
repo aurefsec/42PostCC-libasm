@@ -5,11 +5,13 @@ extern malloc
 ft_list_push_front:
   push rdi
   mov rdi, 16
+  push rsi
 
   call malloc wrt ..plt
   test rax, rax
   je .error
 
+  pop rsi
   mov rdi, QWORD [rsi]
   mov QWORD [rax], rdi
 
