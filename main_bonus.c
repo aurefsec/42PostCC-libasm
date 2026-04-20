@@ -16,14 +16,8 @@ int main(void)
   memset(l, 0, sizeof(t_list));
   l->data = "je fais un test";
   char* str = "je fais un test 2";
-  int bool = ft_list_push_front(&l, str);
-  if (bool == 0)
-  {
-    free(l);
-    memset(l, 0, sizeof(t_list));
-    return 1;
-  }
-  for (int i = 0; l != 0; i++);
+  ft_list_push_front(&l, str);
+  for (int i = 0; l != 0; i++)
   {
     printf("i = %d | data = %s\n", i, (char *)l->data);
     t_list *tmp = l;
