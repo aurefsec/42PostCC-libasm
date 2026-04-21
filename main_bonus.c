@@ -47,6 +47,7 @@ int main(void)
   t_list* l3 = malloc(sizeof(t_list));
   if (!l3)
     return 1;
+  memset(l3, 0, sizeof(t_list));
   int n1 = 1;
   int n2 = 2;
   int n3 = 3;
