@@ -29,6 +29,7 @@ int main(void)
   t_list* l2 = malloc(sizeof(t_list));
   if (!l2)
     return 1;
+  memset(l2, 0, sizeof(t_list));
   int nb1 = ft_list_size(0);
   int nb2 = ft_list_size(l2);
   ft_list_push_front(&l2, str);
