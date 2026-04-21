@@ -5,8 +5,8 @@ ft_list_sort:
   push rbx
   mov rbx, rsi
 
-  mov r8, rdi
   push r8
+  mov r8, rdi
 
   mov rdx, QWORD [rdi]
   test rdx, rdx
@@ -48,6 +48,7 @@ ft_list_sort:
 .unsorted:
   xor r9, r9
   mov rdx, QWORD [r8]
+  push r8
   jmp .loop
 
 .end:
