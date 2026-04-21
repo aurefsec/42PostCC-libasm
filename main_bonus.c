@@ -36,7 +36,7 @@ int main(void)
   ft_list_push_front(&l2, str);
   ft_list_push_front(&l2, str);
   int nb3 = ft_list_size(l2);
-  printf("nb1 = %d nb2 = %d nb3 = %d\n", nb1, nb2, nb3);
+  printf("nb1 = %d\n nb2 = %d\n nb3 = %d\n", nb1, nb2, nb3);
   while (l2)
   {
     t_list *tmp = l2;
