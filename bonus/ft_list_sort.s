@@ -37,6 +37,6 @@ ft_list_sort:
   mov QWORD [rdx], r10
   jmp .loop
 
-.nend:
+.end:
   pop rbx
   ret
