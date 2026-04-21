@@ -48,7 +48,7 @@ ft_list_sort:
 .unsorted:
   xor r9, r9
   mov rdx, QWORD [r8]
-  jump .loop
+  jmp .loop
 
 .end:
   pop r8
