@@ -20,9 +20,9 @@ int main(void)
   int i = 0;
   while (l)
   {
-    printf("i = %d | data = %s\n", i, (char *)l->data);
+    printf("i = %d | data = %s\n", i, (char*)l->data);
     i++;
-    t_list *tmp = l;
+    t_list* tmp = l;
     l = l->next;
     free(tmp);
   }
@@ -39,9 +39,37 @@ int main(void)
   printf("nb1 = %d\nnb2 = %d\nnb3 = %d\n", nb1, nb2, nb3);
   while (l2)
   {
-    t_list *tmp = l2;
+    t_list* tmp = l2;
     l2 = l2->next;
     free(tmp);
   }
+
+  printf("\nTEST4 : ft_list_sort\n");
+  t_list* l3 = malloc(sizeof(t_list));
+  if (!l3)
+    return 1;
+  l->data = (*void)1;
+  ft_list_push_front(&l3, (*void)2);
+  ft_list_push_front(&l3, (*void)3);
+  t_list* l4 = l3;
+  i = 0;
+  while (l3)
+  {
+    printf("i = %d | data = %d\n", i, (int*)l3->data);
+    i++;
+    t_list* tmp = l3;
+    l3 = l3->next;
+  }
+  ft_list_sort(&l4, strcmp);
+  i = 0;
+  while (l4)
+  {
+    printf("i = %d | data = %d\n", i, (int*)l4->data);
+    i++;
+    t_list* tmp = l4;
+    l4 = l4->next;
+    free(tmp);
+  }
+
   return 0;
 }
