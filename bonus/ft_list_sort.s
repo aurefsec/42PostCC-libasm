@@ -7,7 +7,7 @@ ft_list_sort:
 
   mov rdx, QWORD[rdi]
   test rdx, rdx
-  je .end:
+  je .end
 
   .loop:
   mov rcx, rdx
