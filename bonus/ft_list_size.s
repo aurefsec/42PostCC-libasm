@@ -13,7 +13,7 @@ ft_list_size:
 
     mov rdi, rsi
     inc rax
-    jump .loop
+    jmp .loop
 
 .end:
   ret
