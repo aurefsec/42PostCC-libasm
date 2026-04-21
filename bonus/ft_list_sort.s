@@ -5,10 +5,10 @@ ft_list_sort:
   push rbx
   mov rbx, rsi
 
-  push r8
   mov r8, rdi
+  push r8
 
-  mov rdx, QWORD[rdi]
+  mov rdx, QWORD [rdi]
   test rdx, rdx
   je .end
 
