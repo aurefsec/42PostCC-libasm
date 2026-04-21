@@ -27,7 +27,7 @@ int main(void)
     free(tmp);
   }
 
-  printf{"\nTEST3 : ft_list_size\n"};
+  printf("\nTEST3 : ft_list_size\n");
   t_list* l2 = malloc(sizeof(t_list));
   if (!l2)
     return 1;
