@@ -50,7 +50,7 @@ int main(void)
   int n1 = 1;
   int n2 = 2;
   int n3 = 3;
-  l->data = &n1;
+  l3->data = &n1;
   ft_list_push_front(&l3, &n2);
   ft_list_push_front(&l3, &n3);
   t_list* l4 = l3;
