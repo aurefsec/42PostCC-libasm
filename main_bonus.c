@@ -47,9 +47,12 @@ int main(void)
   t_list* l3 = malloc(sizeof(t_list));
   if (!l3)
     return 1;
-  l->data = (void*)1;
-  ft_list_push_front(&l3, (void*)2);
-  ft_list_push_front(&l3, (void*)3);
+  int n1 = 1;
+  int n2 = 2;
+  int n3 = 3;
+  l->data = &n1;
+  ft_list_push_front(&l3, &n2);
+  ft_list_push_front(&l3, &n3);
   t_list* l4 = l3;
   printf("Before sort :\n");
   while (l3)
