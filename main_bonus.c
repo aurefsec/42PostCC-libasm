@@ -27,5 +27,21 @@ int main(void)
     free(tmp);
   }
 
+  printf{"\nTEST3 : ft_list_size\n"};
+  t_list* l = malloc(sizeof(t_list));
+  if (!l)
+    return 1;
+  int nb1 = ft_list_size(0);
+  int nb2 = ft_list_size(l);
+  ft_list_push_front(&l, str);
+  ft_list_push_front(&l, str);
+  int nb3 = ft_list_size(l);
+  printf("nb1 = %d nb2 = %d nb3 = %d\n", nb1, nb2, nb3);
+  while (l)
+  {
+    t_list *tmp = l;
+    l = l->next;
+    free(tmp);
+  }
   return 0;
 }

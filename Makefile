@@ -9,7 +9,8 @@ SRCS = 	ft_strlen.s	\
 				ft_strdup.s
 
 SRCS_BONUS = ft_atoi_base.s 			\
-						 ft_list_push_front.s
+						 ft_list_push_front.s \
+						 ft_list_size.s
 
 OBJDIR = obj
 OBJS = $(addprefix $(OBJDIR)/,$(SRCS:.s=.o))
