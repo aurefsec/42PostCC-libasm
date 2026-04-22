@@ -1,17 +1,17 @@
 section .text
 global ft_list_remove_if
 
-ft_list_remove_if:
-  mov r8, QWORD [rdi]
-  test r8, r8
-  je .end
-
+ft_list_remove_if: 
   push r12
   mov r12, rsi
   push r13
   mov r13, rdx
   push r14
   mov r14, rcx
+
+  mov r8, QWORD [rdi]
+  test r8, r8
+  je .end
 
   xor r9, r9
 
