@@ -44,7 +44,7 @@ ft_list_remove_if:
   push r9
   push r8
 
-  mov rdi, QWORD [r9]
+  mov rdi, r9
 
   call r14
 
