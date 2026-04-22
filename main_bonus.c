@@ -51,9 +51,9 @@ int main(void)
   char* s1 = "1";
   char* s2 = "2";
   char* s3 = "3";
-  l3->data = n1;
-  ft_list_push_front(&l3, n2);
-  ft_list_push_front(&l3, n3);
+  l3->data = s1;
+  ft_list_push_front(&l3, s2);
+  ft_list_push_front(&l3, s3);
   t_list* l4 = l3;
   printf("Before sort :\n");
   while (l3)
