@@ -17,7 +17,7 @@ ft_list_sort:
 
 .loop:
   mov rcx, rdx
-  mov rdx, QWORD[rdx + 8]
+  mov rdx, QWORD [rdx + 8]
   test rdx, rdx
   je .end
 

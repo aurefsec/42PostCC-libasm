@@ -48,24 +48,24 @@ int main(void)
   if (!l3)
     return 1;
   memset(l3, 0, sizeof(t_list));
-  int n1 = 1;
-  int n2 = 2;
-  int n3 = 3;
-  l3->data = &n1;
-  ft_list_push_front(&l3, &n2);
-  ft_list_push_front(&l3, &n3);
+  char* s1 = "1";
+  char* s2 = "2";
+  char* s3 = "3";
+  l3->data = n1;
+  ft_list_push_front(&l3, n2);
+  ft_list_push_front(&l3, n3);
   t_list* l4 = l3;
   printf("Before sort :\n");
   while (l3)
   {
-    printf("data = %d\n", *(int*)l3->data);
+    printf("data = %s\n", (char*)l3->data);
     l3 = l3->next;
   }
   printf("\nAfter sort\n");
   ft_list_sort(&l4, strcmp);
   while (l4)
   {
-    printf("data = %d\n", *(int*)l4->data);
+    printf("data = %s\n", (char*)l4->data);
     t_list* tmp = l4;
     l4 = l4->next;
     free(tmp);
