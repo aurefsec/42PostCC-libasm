@@ -1,5 +1,5 @@
 NAME = libasm.a
-NAME_BONUS = libasm_bonus.a
+NAME_BONUS = bonus/libasm_bonus.a
 
 SRCS = 	ft_strlen.s	\
 				ft_strcpy.s	\
