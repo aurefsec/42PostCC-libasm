@@ -17,7 +17,7 @@ SRCS_BONUS = ft_atoi_base.s 			\
 OBJDIR = obj
 OBJS = $(addprefix $(OBJDIR)/,$(SRCS:.s=.o))
 
-OBJDIR_BONUS = obj_bonus
+OBJDIR_BONUS = bonus/obj_bonus
 OBJS_BONUS = $(addprefix $(OBJDIR_BONUS)/,$(SRCS_BONUS:.s=.o))
 
 NASM = nasm
