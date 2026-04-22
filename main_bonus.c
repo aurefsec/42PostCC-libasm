@@ -90,7 +90,7 @@ int main(void)
     l6 = l6->next;
   }
   char* s6 = "3";
-  ft_list_remove_if(&l6, s6, strcmp, free);
+  ft_list_remove_if(&l7, s6, strcmp, free);
   t_list* l8 = l7;
   printf("After remove '3' :\n");
   while (l7)
