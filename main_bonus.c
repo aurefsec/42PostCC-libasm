@@ -50,7 +50,7 @@ int main(void)
   memset(l3, 0, sizeof(t_list));
   char* s1 = "1";
   char* s2 = "2";
-  char* s2 = "2";
+  char* s3 = "2";
   char* s4 = "3";
   l3->data = s1;
   ft_list_push_front(&l3, s2);
