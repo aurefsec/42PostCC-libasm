@@ -34,7 +34,7 @@ ft_list_sort:
   pop rdx
   pop r9
 
-  cmp rax, 0
+  test rax, rax
   jg .swap
   jmp .loop
 
