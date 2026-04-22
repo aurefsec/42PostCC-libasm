@@ -23,7 +23,7 @@ ft_list_remove_if:
     mov r8, QWORD [r8 + 8]
 
     mov rdi, QWORD [r9]
-    mov rsi, QWORD [r12]
+    mov rsi, r12
 
     push r10
     push r9

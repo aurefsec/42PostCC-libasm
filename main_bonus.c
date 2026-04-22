@@ -63,7 +63,7 @@ int main(void)
     printf("data = %s\n", (char*)l3->data);
     l3 = l3->next;
   }
-  printf("After sort\n");
+  printf("After sort :\n");
   ft_list_sort(&l4, strcmp);
   t_list* l5 = l4;
   while (l4)
