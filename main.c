@@ -3,9 +3,8 @@
 int main(void)
 {
   printf("TEST 1 : ft_strlen\n");
-  size_t l1 = strlen("je fais un test");
-  size_t l2 = ft_strlen("je fais un test");
-  printf("strlen = %ld\nft_strlen = %ld\n", l1, l2);
+  size_t l1 = ft_strlen("je fais un test");
+  printf("ft_strlen = %ld\n", l1);
 
   printf("\nTEST 2 : ft_strcpy\n");
   char* dst = malloc(sizeof(char) * strlen(src) + 1);
@@ -22,29 +21,19 @@ int main(void)
   printf("strcmp = %d\nft_strcmp = %d\n", nb1, nb2);
 
   printf("\nTEST 4 : ft_write\n");
-  ssize_t w1 = write(1, "je fais un test\n", 16);
-  ssize_t w2 = ft_write(1, "je fais un test\n", 16);
-  printf("write = %zd\nft_write = %zd\n", w1, w2);
+  ssize_t w1 = ft_write(1, "je fais un test\n", 16);
+  printf("ft_write = %zd\n", w1);
 
   printf("\nTEST 5 : ft_read\n");
   int fd1[2];
-  int fd2[2];
   pipe(fd1);
-  pipe(fd2);
   write(fd1[1], "je fais un test\n", 16);
-  write(fd2[1], "je fais un test\n", 16);
-  char buff1[50];
-  char buff2[50];
-  ssize_t r1 = read(fd1[0], buff1, 16);
-  ssize_t r2 = ft_read(fd2[0], buff2, 16);
+  char buff[50];
+  ssize_t r1 = ft_read(fd1[0], buff, 16);
   buff1[r1] = '\0';
-  buff2[r2] = '\0';
-  printf("read return = %zd\nread buff = %s", r1, buff1);
-  printf("ft_read return = %zd\nft_read buff = %s", r2, buff2);
+  printf("ft_read return = %zd\nft_read buff = %s", r1, buff);
   close(fd1[0]);
   close(fd1[1]);
-  close(fd2[0]);
-  close(fd2[1]);
 
   printf("\nTEST 6 : ft_strdup\n");
   char* dst1 = strdup("je fais un test");
