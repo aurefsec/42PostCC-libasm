@@ -3,18 +3,16 @@
 int main(void)
 {
   printf("TEST 1 : ft_strlen\n");
-  char* s = "je fais un test";
-  size_t l1 = strlen(s);
-  size_t l2 = ft_strlen(s);
+  size_t l1 = strlen("je fais un test");
+  size_t l2 = ft_strlen("je fais un test");
   printf("strlen = %ld\nft_strlen = %ld\n", l1, l2);
 
   printf("\nTEST 2 : ft_strcpy\n");
-  char* src = "je fais un test";
   char* dst = malloc(sizeof(char) * strlen(src) + 1);
   if (!dst)
     return 1;
-  char* ret1 = strcpy(dst, src);
-  char* ret2 = ft_strcpy(dst, src);
+  char* ret1 = strcpy(dst, "je fais un test");
+  char* ret2 = ft_strcpy(dst, "je fais un test");
   printf("strcpy = %s\nft_strcpy = %s\n", ret1, ret2);
   free(dst);
 

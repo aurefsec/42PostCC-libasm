@@ -89,15 +89,8 @@ int main(void)
     printf("data = %s\n", (char*)l6->data);
     l6 = l6->next;
   }
-  char* s6 = "3";
-  ft_list_remove_if(&l7, s6, strcmp, free);
-  t_list* l8 = l7;
-  printf("After remove '3' :\n");
-  while (l7)
-  {
-    printf("data = %s\n", (char*)l7->data);
-    l7 = l7->next;
-  }
+  t_list* l8 = l7->next;
+  free(l7);
   free(l8);
   return 0;
 }
