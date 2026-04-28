@@ -5,6 +5,7 @@ extern __errno_location
 ft_write:
   mov eax, 1
   syscall
+  test rax, rax
   js .error
   ret
 

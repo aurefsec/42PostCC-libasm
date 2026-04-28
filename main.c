@@ -17,7 +17,6 @@ int main(void)
   char* ret2 = ft_strcpy(dst, src);
   printf("strcpy = %s\nft_strcpy = %s\n", ret1, ret2);
   free(dst);
-  dst = NULL;
 
   printf("\nTEST 3 : ft_strcmp\n");
   int nb1 = strcmp("je fais un test", "je fais un test");
@@ -61,14 +60,10 @@ int main(void)
   {
     printf("Error\n");
     free(dst1);
-    dst1 = NULL;
     return 1;
   }
   printf("strdup = %s\nft_strdup = %s\n", dst1, dst2);
   free(dst1);
   free(dst2);
-  dst1 = NULL;
-  dst2 = NULL;
-
   return 0;
 }
