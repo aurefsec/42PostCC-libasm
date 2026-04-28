@@ -7,7 +7,7 @@ int main(void)
   printf("ft_strlen = %ld\n", l1);
 
   printf("\nTEST 2 : ft_strcpy\n");
-  char* dst = malloc(sizeof(char) * strlen(src) + 1);
+  char* dst = malloc(sizeof(char) * strlen("je fais un test") + 1);
   if (!dst)
     return 1;
   char* ret1 = strcpy(dst, "je fais un test");
