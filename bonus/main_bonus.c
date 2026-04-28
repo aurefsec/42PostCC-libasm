@@ -6,7 +6,7 @@ int main(void)
   int binary = ft_atoi_base("+11111111", "01");
   int hex = ft_atoi_base("FF", "0123456789ABCDEF");
   int decimal = ft_atoi_base("-44", "0123456789");
-  printf("binary = %d\nhex = %d\ndecimal = %d\nerror = %d\n", binary, hex, decimal, error);
+  printf("binary = %d\nhex = %d\ndecimal = %d\n", binary, hex, decimal);
 
   printf("\nTEST 2 : ft_list_push_front\n");
   t_list* l = malloc(sizeof(t_list));

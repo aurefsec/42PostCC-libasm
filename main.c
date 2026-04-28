@@ -30,7 +30,7 @@ int main(void)
   write(fd1[1], "je fais un test\n", 16);
   char buff[50];
   ssize_t r1 = ft_read(fd1[0], buff, 16);
-  buff1[r1] = '\0';
+  buff[r1] = '\0';
   printf("ft_read return = %zd\nft_read buff = %s", r1, buff);
   close(fd1[0]);
   close(fd1[1]);
